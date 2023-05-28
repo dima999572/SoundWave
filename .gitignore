@@ -1,1 +1,2 @@
-*__pycache__  # # Ignore a directories named "__pycache__"
+# Ignore a directories named "__pycache__"
+**__pycache__/
