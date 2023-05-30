@@ -1,0 +1,16 @@
+{% extends 'public/auth_base.html' %} {% block operation %} Login {% endblock %}
+{% block form %}
+<div>
+  <label for="email">Email Address</label>
+  <input type="email" name="email" placeholder="Entrer Email" required />
+</div>
+<div>
+  <label for="password">Password</label>
+  <input
+    type="password"
+    name="password"
+    placeholder="Entrer Password"
+    required
+  />
+</div>
+{% endblock %} {% block form_button %} Sign In {% endblock %}

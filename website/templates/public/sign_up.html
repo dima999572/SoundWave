@@ -1,0 +1,28 @@
+{% extends 'public/auth_base.html' %} {% block operation %} Sign Up {% endblock
+%} {% block form %}
+<div>
+  <label for="firstName">First Name</label>
+  <input type="text" name="firstName" placeholder="First Name" required />
+</div>
+<div>
+  <label for="lastName">Last Name</label>
+  <input type="text" name="lastName" placeholder="Last Name" required />
+</div>
+<div>
+  <label for="email">Email Address</label>
+  <input type="email" name="email" placeholder="Email Address" required />
+</div>
+<div>
+  <label for="password1">Password</label>
+  <input type="password" name="password1" placeholder="Password" required />
+</div>
+<div>
+  <label for="password2">Confirm Password</label>
+  <input
+    type="password"
+    name="password2"
+    placeholder="Confirm Password"
+    required
+  />
+</div>
+{% endblock %} {% block form_button %} Submit {% endblock %}
