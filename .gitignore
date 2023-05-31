@@ -1,2 +1,5 @@
 # Ignore a directories named "__pycache__"
 **__pycache__/
+
+# Ignore a Database directory
+instance/
