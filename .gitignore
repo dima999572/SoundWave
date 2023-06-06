@@ -3,3 +3,6 @@
 
 # Ignore a Database directory
 instance/
+
+# Ignore a .env file
+.env

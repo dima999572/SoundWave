@@ -2,6 +2,7 @@ from flask import Flask
 import os
 from flask_sqlalchemy import SQLAlchemy
 from os import path
+from flask_login import LoginManager
 
 
 db = SQLAlchemy()
@@ -23,6 +24,16 @@ def create_app():
     if not path.exists('instance/' + DB_NAME):
         with app.app_context():
             create_database()
+
+    from website.models.db import User
+
+    login_manager = LoginManager()
+    login_manager.login_view = "auth.login"
+    login_manager.init_app(app)
+
+    @login_manager.user_loader
+    def load_user(id):
+        return User.query.get(int(id))
 
     return app
 
