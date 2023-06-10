@@ -18,7 +18,7 @@ def login():
             if user.password == password:
                 flash("Logged in successfully!")
                 login_user(user, remember=True)
-                return redirect(url_for("start_bp.start"))
+                return redirect(url_for("home_bp.home"))
             else:
                 flash("Incorrect password, try again.")
         else:
