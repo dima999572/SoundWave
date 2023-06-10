@@ -6,3 +6,6 @@ instance/
 
 # Ignore a .env file
 .env
+
+# Ignore folder with audios and all files in it
+audios/
